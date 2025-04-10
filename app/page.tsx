@@ -1,25 +1,27 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/context/LanguageContext"
+import { useState } from "react";
+
+import { useRouter } from "next/navigation";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
-  const router = useRouter()
-  const { t } = useLanguage()
-  const [credentials, setCredentials] = useState("")
-  const [password, setPassword] = useState("")
+  const router = useRouter();
+  const { t } = useLanguage();
+  const [credentials, setCredentials] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Add validation logic here
-    router.push("/candidates")
-  }
+
+    router.push("/candidates");
+  };
 
   return (
     <div className="container mx-auto px-4 py-8 flex items-center justify-center">
@@ -60,5 +62,5 @@ export default function Home() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
