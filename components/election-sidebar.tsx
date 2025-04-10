@@ -55,7 +55,8 @@ export function ElectionSidebar({ categories, activeCategory, onCategoryChange }
                   }
                 >
                   {activeCategory === category.id && <Check className="mr-2 h-4 w-4" />}
-                  <span>{language === "en" ? category.name : category.nameSwahili}</span>
+                  <span>{language === "en" ? category.name : category.nameSwahili}</span> 
+                  
                 </SidebarMenuButton>
               </SidebarMenuItem>
             ))}
